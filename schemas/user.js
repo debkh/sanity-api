@@ -1,7 +1,7 @@
-export default  {
+export default {
+  title: 'User',
   name: 'user',
   type: 'document',
-  title: 'User',
   fields: [
     {
       name: 'first_name',
@@ -14,9 +14,10 @@ export default  {
       title: 'Last Name'
     },
     {
+      title: 'Position',
       name: 'position',
-      type: 'string',
-      title: 'Position'
+      type: 'reference',
+      to: [{ type: 'position' }],
     }
   ]
 }
